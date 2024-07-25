@@ -1,0 +1,660 @@
+nav {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 1.5%;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.container_child h5 {
+  color: #26d6f5;
+}
+.container {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  padding: 2%;
+  align-items: center;
+}
+.container_child {
+  background-color: rgba(51, 51, 51, 0.788);
+  padding: 2%;
+  margin: 2%;
+  border-radius: 2%;
+}
+.url_input {
+  width: 70%;
+}
+.file_input {
+  width: 70%;
+  background-color: white;
+}
+div {
+  margin-bottom: 10%;
+}
+
+input[type="file"]::file-selector-button {
+  border: 2px solid #000000;
+  padding: 0.2em 0.4em;
+  background-color: #ffffff;
+}
+.error-message {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin: 10px;
+  padding: 2px;
+  border: 2px solid red;
+  background-color: #f0a0a0;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+button {
+  background-color: white;
+
+  color: black;
+  width: 40%;
+  border: 2px solid black;
+}
+/* ----------------logincard--------------- */
+/* Container for the login card */
+.login-card {
+  background-color: white; /* Default background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 20px; /* Inner spacing */
+  width: 300px; /* Fixed width */
+  margin: 50px auto; /* Center align horizontally and add some vertical margin */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border changes */
+}
+
+/* Styling for different modes */
+.login-card.user {
+  background-color: #e0f7fa; /* Light blue for user */
+  border: 1px solid #00bcd4; /* Blue border for user mode */
+}
+
+.login-card.admin {
+  background-color: #fff3e0; /* Light orange for admin */
+  border: 1px solid #ff9800; /* Orange border for admin mode */
+}
+
+/* Styling for the title/name */
+.login-card span {
+  display: block; /* Ensure it's on its own line */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Styling for the input fields */
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  width: 100%; /* Full width of the parent container */
+  padding: 10px; /* Padding inside the input */
+  margin-bottom: 15px; /* Spacing below each input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  font-size: 16px; /* Font size for the input text */
+}
+
+/* Styling for the submit button */
+.login-card button[type="submit"] {
+  width: 100%; /* Full width of the parent container */
+  padding: 10px; /* Padding inside the button */
+  background-color: #000000; /* Button background color */
+  color: #ffffff; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Add hover effect for the button */
+.login-card button[type="submit"]:hover {
+  background-color: #29e2f0; /* Lighter shade on hover */
+}
+
+/* Toggle button container */
+.toggle-container {
+  width: 100%; /* Full width of the parent container */
+  display: flex; /* Flexbox for horizontal alignment */
+  justify-content: center; /* Center the toggle */
+  margin-top: 20px; /* Margin at the top */
+}
+
+/* Styling for the toggle button */
+.toggle-button {
+  background-color: #f0f0f0; /* Light grey background */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 25px; /* Rounded container */
+  display: flex; /* Flexbox for smooth sliding */
+  width: 100px; /* Fixed width */
+  position: relative; /* For absolute positioning of the slider */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+/* Slider for the toggle button */
+.toggle-slider {
+  width: 50%; /* Half the width of the toggle button */
+  height: 35px; /* Fixed height */
+  border-radius: 40%; /* Fully rounded ends */
+  background-color: #00bcd4; /* Default blue for user */
+  position: absolute; /* Absolute positioning for sliding */
+  top: 0; /* Align to top */
+  left: 0; /* Start at the left */
+  transition: left 0.3s; /* Smooth slide transition */
+}
+
+/* Change color and position for admin mode */
+.toggle-button.admin .toggle-slider {
+  background-color: #ff9800; /* Orange for admin */
+  left: 50%; /* Move to the right half */
+}
+
+/* Text labels for the toggle */
+.toggle-label {
+  flex: 1; /* Flex for equal width */
+  text-align: center; /* Center the text */
+  line-height: 25px; /* Align text vertically */
+  font-size: 14px; /* Font size */
+  z-index: 1; /* Ensure text is above the slider */
+  pointer-events: none; /* Disable pointer events for the text */
+}
+/* ---------------------------------adminpage-------------------------------- */
+/* style.css */
+
+.adminuicontainer {
+  margin-top: 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 20px; /* Space between columns */
+  /* White background */
+  padding: 20px; /* Padding around the grid */
+}
+.noteead {
+  color: red;
+  display: block;
+  font-weight: 900;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 2%;
+}
+.note {
+  color: red;
+  display: block;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+}
+.singleproduct,
+.csvproduct {
+  background-color: rgb(31, 29, 29); /* White background for each div */
+  padding: 20px;
+  border: 1px solid rgb(31, 29, 29); /* Optional: Border to differentiate sections */
+  border-radius: 5px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.singleproduct-form,
+.csvproduct-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputurl,
+.inputname,
+.takefile {
+  margin-bottom: 15px;
+  color: #26d6f5;
+}
+
+input[type="url"],
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: rgb(21, 208, 221);
+}
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears on top */
+}
+/* Container styles */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 16px; /* Adjust the gap between the grid items */
+  padding: 16px; /* Add padding around the container */
+  justify-items: center; /* Center items horizontally */
+  color: #26d6f5;
+  font-weight: 400;
+}
+
+/* Column styles */
+.column {
+  text-align: center; /* Center text inside the column */
+  border: 3px white solid;
+  border-radius: 5%;
+  background-color: white;
+}
+.column p {
+  font-weight: 500;
+  color: black;
+}
+
+.prdetails {
+  width: 100%; /* Make the image fill the column */
+  height: 200px;
+  /* Maintain the aspect ratio */
+}
+#imgresult {
+  object-fit: cover;
+  height: auto;
+}
+.form-container {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Two columns, each taking up equal space */
+  gap: 20px; /* Adjust the gap between the forms */
+  background-color: #353434; /* Light gray background */
+  padding: 20px; /* Add padding around the container */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Vertically center the forms */
+  color: white;
+}
+
+.form_submit {
+  display: grid;
+  gap: 10px; /* Adjust the gap between the elements inside the form */
+}
+
+.file_input,
+button {
+  width: 100%; /* Make inputs and buttons full-width */
+}
+/* Container for the registration button */
+.registration {
+  text-align: center; /* Center the button horizontally */
+  margin-top: 20px; /* Add some space above the button */
+}
+
+/* Styling the button */
+.registration button {
+  background-color: black; /* Black background for the button */
+  color: cyan; /* Cyan text color */
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Curved borders */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 18px; /* Font size for the button text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Styling the text inside the button */
+.registration button p {
+  margin: 0; /* Remove default margin from the paragraph */
+}
+
+/* Hover effect for the button */
+.registration button:hover {
+  color: #ffd700; /* Yellow mustard color on hover */
+}
+
+/* Ensuring the p inside button responds to click */
+.registration button p:hover {
+  color: inherit; /* Inherit the button's hover color */
+}
+/* Container for the form */
+.regicontainer {
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: black; /* Black background for the entire page */
+}
+
+/* Styling the form */
+.regform {
+  background-color: white; /* White background for the form */
+  border-radius: 15px; /* Curved borders */
+  padding: 30px; /* Padding inside the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
+  width: 300px; /* Fixed width for the form */
+  text-align: center; /* Center text inside the form */
+  position: relative; /* Relative positioning */
+}
+
+/* Styling individual input fields */
+.regform input,
+.regform select {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Padding inside inputs */
+  margin: 10px 0; /* Space between inputs */
+  border: 2px solid black; /* Black border */
+  border-radius: 10px; /* Curved borders */
+  font-size: 16px; /* Font size for inputs */
+  box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+/* Styling the submit button */
+.regform button {
+  background-color: black; /* Initial background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 10px; /* Curved borders */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover and focus effect for the button */
+.regform button:hover,
+.regform button:focus {
+  background-color: red; /* Red background on hover */
+}
+
+/* Ensuring the form is responsive */
+@media (max-width: 600px) {
+  .regform {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+/* Styles for the search bar container */
+.serc-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 400px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+/* Styles for the text input */
+.txt-searc {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Container for the icon and label */
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+/* Styles for the label */
+.img-searc-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the image icon */
+.img-searc-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hides the file input element */
+.img-searc {
+  display: none;
+}
+.search-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.image-preview-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Container for message alerts */
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base styling for all messages */
+.message {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Success message styling */
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+/* Error message styling */
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Optional: Add a fade-in effect for messages */
+.message {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 600px) {
+  .regform {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .adminuicontainer {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .adminuicontainer {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Search Bar */
+.serc-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 400px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.txt-searc {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.img-searc-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-searc-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.img-searc {
+  display: none;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.image-preview-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Messages */
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.message {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
